@@ -15,7 +15,7 @@ export class AppService {
   redisClient = null;
 
   constructor(private readonly redisService: RedisService) {
-    this.redisClient = redisService.getClient();
+    this.redisClient = this.redisService.getClient();
   }
 
   async getContinentsData() {
@@ -39,8 +39,8 @@ export class AppService {
         console.log('Continents data from external API');
 
         if (response.data.data.continents) {
-          result = response.data.data.continents;
-          this.redisClient.set('continents', JSON.stringify(result));
+            result = response.data.data.continents;
+            this.redisClient.set('continents', JSON.stringify(result));
         }
 
       })
@@ -82,8 +82,8 @@ export class AppService {
         console.log(`${continentCode} countries data from external API`);
 
         if (response.data.data.continent) {
-          result = response.data.data.continent.countries;
-          this.redisClient.set(continentCode, JSON.stringify(result));
+            result = response.data.data.continent.countries;
+            this.redisClient.set(continentCode, JSON.stringify(result));
         }
       })
       .catch(error => {
