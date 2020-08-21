@@ -4,10 +4,7 @@ Continents & countries search API
 
 ## Installation
 
-```bash
-Clone the repository: git clone https://github.com/mici37000/888.git
-
-```
+Clone the repository: git clone ```https://github.com/mici37000/888.git```
 
 ## Running the app
 
