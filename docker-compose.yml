@@ -1,12 +1,12 @@
 version: '3'
 services:
-  # web:
-  #   build:
-  #     context: ./server
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - .:/code
+  web:
+    build:
+      context: ./server
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/code
   redis:
     image: "redis:alpine"
     ports:
